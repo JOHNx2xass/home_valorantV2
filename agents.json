@@ -1,1 +1,75 @@
+{
+  "agents": [
+    {
+      "id": "phoenix",
+      "name": "Phoenix",
+      "role": "Duelist",
+      "description": "Hailing from the U.K., Phoenix's star power shines through in his fighting style, igniting the battlefield with flash and flare. Whether he's got backup or not, he'll rush into a fight on his own terms.",
+      "abilities": ["Ability 1", "Ability 2"]
+    },
+    {
+      "id": "brimstone",
+      "name": "Brimstone",
+      "role": "Controller",
+      "description": "",
+      "abilities": ["Ability 1", "Ability 2", "Ability 3"]
+    },
+    {
+      "id": "sova",
+      "name": "Sova",
+      "role": "Initiator",
+      "description": "",
+      "abilities": ["Ability 1", "Ability 2", "Ability 3"]
+    },
+    {
+      "id": "sage",
+      "name": "Sage",
+      "role": "Sentinel",
+      "description": "",
+      "abilities": ["Ability 1", "Ability 2", "Ability 3"]
+    },
+    {
+      "id": "skye",
+      "name": "Skye",
+      "role": "Initiator",
+      "description": "",
+      "abilities": ["Ability 1", "Ability 2", "Ability 3"]
+    },
+    {
+      "id": "omen",
+      "name": "Omen",
+      "role": "Controller",
+      "description": "",
+      "abilities": ["Ability 1", "Ability 2", "Ability 3"]
+    },
+    {
+      "id": "reyna",
+      "name": "Reyna",
+      "role": "Duelist",
+      "description": "",
+      "abilities": ["Ability 1", "Ability 2", "Ability 3"]
+    },
+    {
+      "id": "jett",
+      "name": "Jett",
+      "role": "Duelist",
+      "description": "",
+      "abilities": ["Ability 1", "Ability 2", "Ability 3"]
+    },
+    {
+      "id": "raze",
+      "name": "Raze",
+      "role": "Duelist",
+      "description": "",
+      "abilities": ["Ability 1", "Ability 2", "Ability 3"]
+    },
+    {
+      "id": "killjoy",
+      "name": "Killjoy",
+      "role": "Sentinel",
+      "description": "",
+      "abilities": ["Ability 1", "Ability 2", "Ability 3"]
+    }
+  ]
+}
 
