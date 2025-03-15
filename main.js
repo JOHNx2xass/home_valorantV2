@@ -41,20 +41,43 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Add click event to each agent card for showing details
-  agentCards.forEach((card) => {
-    card.addEventListener('click', function () {
-      // Hide all agent details by default
-      agentDetails.forEach((detail) => detail.classList.remove('active'));
+  // Fetch agent details from JSON file
+  fetch('agents.json')
+    .then(response => response.json())
+    .then(data => {
+      const agents = data.agents;
 
-      // Get the agent name from the clicked card
-      const agentName = this.querySelector('h3').textContent.toLowerCase();
+      // Function to show agent details
+      function showAgentDetails(agentId) {
+        // Hide all agent details by default
+        document.querySelector('.agent-details-container').innerHTML = '';
 
-      // Show the corresponding agent details
-      const agentDetail = document.getElementById(agentName + '-details');
-      if (agentDetail) {
-        agentDetail.classList.add('active'); // Show agent details
+        // Find the agent details from the JSON data
+        const agent = agents.find(a => a.id === agentId);
+        if (agent) {
+          // Create agent details HTML
+          const agentDetailHtml = `
+            <div class="agent-details active">
+              <h2>${agent.name} - ${agent.role}</h2>
+              <p>${agent.description}</p>
+              <ul>
+                ${agent.abilities.map(ability => `<li>${ability}</li>`).join('')}
+              </ul>
+            </div>
+          `;
+
+          // Insert the agent details into the DOM
+          document.querySelector('.agent-details-container').innerHTML = agentDetailHtml;
+        }
       }
+
+      // Add click event to each agent card for showing details
+      agentCards.forEach(card => {
+        card.addEventListener('click', function () {
+          // Get the agent ID from the clicked card
+          const agentId = this.querySelector('h3').textContent.toLowerCase();
+          showAgentDetails(agentId);
+        });
+      });
     });
-  });
 });
