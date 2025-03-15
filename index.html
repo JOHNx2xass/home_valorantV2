@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Valorant</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Welcome to Valorant Agent Selection</h1>
+        <p>Choose your agent category and explore the agents.</p>
+    </header>
+
+    <div class="category-container">
+        <div class="category" onclick="filterAgents('allcategory')">
+            <img src="Valorant_Assets/Class/all.png" alt="All Category" width="50">
+            All Category
+        </div>
+        <div class="category" onclick="filterAgents('duelist')">
+            <img src="Valorant_Assets/Class/Property 1=Duelist.png" alt="Duelists" width="50">
+            Duelists
+        </div>
+        <div class="category" onclick="filterAgents('controller')">
+            <img src="Valorant_Assets/Class/Property 1=Controller.png" alt="Controllers" width="50">
+            Controllers
+        </div>
+        <div class="category" onclick="filterAgents('initiator')">
+            <img src="Valorant_Assets/Class/Property 1=Initiator.png" alt="Initiators" width="50">
+            Initiators
+        </div>
+        <div class="category" onclick="filterAgents('sentinel')">
+            <img src="Valorant_Assets/Class/Property 1=Sentinel.png" alt="Sentinels" width="50">
+            Sentinels
+        </div>
+    </div>
+
+    <div class="agent-list">
+        <div class="agent-card" data-category="duelist" onclick="showAgentDetails('phoenix')">
+            <h3>Phoenix</h3>
+            <img src="Valorant_Assets/Agents-Profiles/Phoenix.png" alt="Phoenix" width="100%">
+        </div>
+        <div class="agent-card" data-category="controller" onclick="showAgentDetails('brimstone')">
+            <h3>Brimstone</h3>
+            <img src="Valorant_Assets/Agents-Profiles/Brimstone.png" alt="Brimstone" width="100%">
+        </div>
+        <div class="agent-card" data-category="initiator" onclick="showAgentDetails('sova')">
+            <h3>Sova</h3>
+            <img src="Valorant_Assets/Agents-Profiles/Sova.png" alt="Sova" width="100%">
+        </div>
+        <div class="agent-card" data-category="sentinel" onclick="showAgentDetails('sage')">
+            <h3>Sage</h3>
+            <img src="Valorant_Assets/Agents-Profiles/Sage.png" alt="Sage" width="100%">
+        </div>
+        <div class="agent-card" data-category="initiator" onclick="showAgentDetails('skye')">
+            <h3>Skye</h3>
+            <img src="Valorant_Assets/Agents-Profiles/Skye.png" alt="Skye" width="100%">
+        </div>
+        <div class="agent-card" data-category="controller" onclick="showAgentDetails('omen')">
+            <h3>Omen</h3>
+            <img src="Valorant_Assets/Agents-Profiles/Omen.png" alt="Omen" width="100%">
+        </div>
+        <div class="agent-card" data-category="duelist" onclick="showAgentDetails('reyna')">
+            <h3>Reyna</h3>
+            <img src="Valorant_Assets/Agents-Profiles/Reyna.png" alt="Reyna" width="100%">
+        </div>
+        <div class="agent-card" data-category="duelist" onclick="showAgentDetails('jett')">
+            <h3>Jett</h3>
+            <img src="Valorant_Assets/Agents-Profiles/Jett.png" alt="Jett" width="100%">
+        </div>
+        <div class="agent-card" data-category="duelist" onclick="showAgentDetails('raze')">
+            <h3>Raze</h3>
+            <img src="Valorant_Assets/Agents-Profiles/Raze.png" alt="Raze" width="100%">
+        </div>
+        <div class="agent-card" data-category="sentinel" onclick="showAgentDetails('killjoy')">
+            <h3>Killjoy</h3>
+            <img src="Valorant_Assets/Agents-Profiles/Killjoy.png" alt="Killjoy" width="100%">
+        </div>
+    </div>
+
+    <div class="agent-details" id="phoenix-details">
+        <h2>Phoenix - Duelist</h2>
+        <p>Hailing from the U.K., Phoenix's star power shines through in his fighting style, igniting the battlefield
+            with flash and flare. Whether he's got backup or not, he'll rush into a fight on his own terms.</p>
+        <ul>
+            <!-- Abilities -->
+            <li> </li>
+            <li> </li>
+        </ul>
+    </div>
+
+    <div class="agent-details" id="brimstone-details">
+        <h2>Brimstone - Controller</h2>
+        <p> </p>
+        <ul>
+            <!-- Abilities -->
+            <li> </li>
+            <li> </li>
+            <li> </li>
+        </ul>
+    </div>
+
+    <div class="agent-details" id="sova-details">
+        <h2>Sova - Initiators</h2>
+        <p> </p>
+        <ul>
+            <!-- Abilities -->
+            <li> </li>
+            <li> </li>
+            <li> </li>
+        </ul>
+    </div>
+
+    <div class="agent-details" id="sage-details">
+        <h2> Sage - Sentinel</h2>
+        <p> </p>
+        <ul>
+            <!-- Abilities -->
+            <li> </li>
+            <li> </li>
+            <li> </li>
+        </ul>
+    </div>
+    <div class="agent-details" id="skye-details">
+        <h2> Skye - Initiators</h2>
+        <p> </p>
+        <ul>
+            <!-- Abilities -->
+            <li> </li>
+            <li> </li>
+            <li> </li>
+        </ul>
+    </div>
+    <div class="agent-details" id="omen-details">
+        <h2> Omen - Controller</h2>
+        <p> </p>
+        <ul>
+            <!-- Abilities -->
+            <li> </li>
+            <li> </li>
+            <li> </li>
+        </ul>
+    </div>
+    <div class="agent-details" id="reyna-details">
+        <h2> Reyna - Duelist</h2>
+        <p> </p>
+        <ul>
+            <!-- Abilities -->
+            <li> </li>
+            <li> </li>
+            <li> </li>
+        </ul>
+    </div>
+    <div class="agent-details" id="jett-details">
+        <h2> Jett - Duelist </h2>
+        <p> </p>
+        <ul>
+            <!-- Abilities -->
+            <li> </li>
+            <li> </li>
+            <li> </li>
+        </ul>
+    </div>
+    <div class="agent-details" id="raze-details">
+        <h2> Raze - Duelist</h2>
+        <p> </p>
+        <ul>
+            <!-- Abilities -->
+            <li> </li>
+            <li> </li>
+            <li> </li>
+        </ul>
+    </div>
+    <div class="agent-details" id="killjoy-details">
+        <h2> Killjoy - Sentinel </h2>
+        <p> </p>
+        <ul>
+            <!-- Abilities -->
+            <li> </li>
+            <li> </li>
+            <li> </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+/* Basic Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #111;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #222;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Category Section */
+.category-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.category {
+  background: #444;
+  padding: 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 1.2rem;
+}
+
+.category:hover {
+  background: #00aaff;
+}
+
+.category-selected {
+  background: #00aaff;
+}
+
+/* Agent Cards */
+.agent-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+
+}
+
+.agent-card {
+  background: #333;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 8px;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.agent-card:hover {
+  transform: scale(1.1);
+}
+
+.agent-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Agent Details */
+.agent-details {
+  display: none;
+  background: #222;
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 8px;
+}
+
+.agent-details.active {
+  display: block;
+}
+
+.agent-details h2 {
+  font-size: 2rem;
+}
+
+.agent-details ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.agent-details ul li {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.agent-details {
+  display: none; /* Hide all by default */
+}
+
+.agent-details.active {
+  display: block; /* Show the active one */
+}
+
+.category-selected {
+  font-weight: bold; /* Or any other styling for the selected category */
+}
