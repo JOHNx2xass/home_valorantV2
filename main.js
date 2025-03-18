@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
       function showAgentDetails(agentId) {
         // Hide all agent details by default
         document.querySelector('.agent-details-container').innerHTML = '';
+        document.querySelector('.agent-details-image').innerHTML = '';
 
         // Find the agent details from the JSON data
         const agent = agents.find(a => a.id === agentId);
@@ -60,14 +61,23 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class="agent-details active">
               <h2>${agent.name} - ${agent.role}</h2>
               <p>${agent.description}</p>
+              <h3>SPECIAL ABILITIES</h3>
               <ul>
-                ${agent.abilities.map(ability => `<li>${ability}</li>`).join('')}
+                ${agent.abilities.map(ability => `
+                  <li>
+                    <img src="${ability.image}" alt="${ability.name}" width="50">
+                    ${ability.name}
+                  </li>`).join('')}
               </ul>
             </div>
           `;
 
           // Insert the agent details into the DOM
           document.querySelector('.agent-details-container').innerHTML = agentDetailHtml;
+
+          // Insert the agent image into the DOM
+          const agentImageHtml = `<img src="${agent.image}" alt="${agent.name}" width="100%">`;
+          document.querySelector('.agent-details-image').innerHTML = agentImageHtml;
         }
       }
 
@@ -75,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
       agentCards.forEach(card => {
         card.addEventListener('click', function () {
           // Get the agent ID from the clicked card
-          const agentId = this.querySelector('h3').textContent.toLowerCase();
+          const agentId = this.dataset.agentId;
           showAgentDetails(agentId);
         });
       });

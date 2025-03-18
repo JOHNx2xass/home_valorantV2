@@ -12,8 +12,6 @@ body {
 }
 
 header {
-  background: url('Valorant_Assets/Full Color/Type_Lockup/V_Lockup_Horizontal_Pos_Red.png') no-repeat center center;
-  background-size: cover;
   padding: 20px;
   text-align: center;
 }
@@ -37,11 +35,17 @@ header p {
 }
 
 .category {
-  background: #444;
-  padding: 15px;
+
+  padding: 10px;
   cursor: pointer;
   transition: background 0.3s;
   font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100px; 
+  border-radius: 4px;
 }
 
 .category:hover {
@@ -50,23 +54,35 @@ header p {
 
 .category-selected {
   background: #00aaff;
+  font-weight: bold;
 }
 
-/* Agent Cards */
-.agent-list {
+/* Main Container */
+.main-container {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
   margin-top: 50px;
 
 }
 
+/* Agent Cards */
+.agent-list {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  padding: 20px;
+}
+
 .agent-card {
   background: #333;
-  padding: 20px;
+  padding: 6px;
   margin: 10px;
-  border-radius: 8px;
-  width: 100px;
+  border-radius: 4px;
+  width: 60px;
   text-align: center;
   cursor: pointer;
   transition: transform 0.3s;
@@ -81,13 +97,36 @@ header p {
   border-radius: 8px;
 }
 
+/* Agent Details Image */
+.agent-details-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.agent-details-image img {
+  height: 100%; /* Set a fixed height */
+  width: 100%; /* Set a fixed width */
+ 
+}
+
+/* Agent Details Container */
+.agent-details-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 /* Agent Details */
 .agent-details {
   display: none;
   background: #222;
-  padding: 20px;
-  margin-top: 30px;
+  padding: 10px;
+  margin-top: 10px;
   border-radius: 8px;
+  text-align: justify;
 }
 
 .agent-details.active {
@@ -106,16 +145,4 @@ header p {
 .agent-details ul li {
   font-size: 1.1rem;
   margin: 5px 0;
-}
-
-.agent-details {
-  display: none; /* Hide all by default */
-}
-
-.agent-details.active {
-  display: block; /* Show the active one */
-}
-
-.category-selected {
-  font-weight: bold; /* Or any other styling for the selected category */
 }
