@@ -11,13 +11,14 @@
 <body>
 
     <header>
+        <img src="Valorant_Assets/Full Color/Type_Lockup/V_Lockup_Vertical_Red.png" alt="Valorant Logo" width="200">
         <h1>Welcome to Valorant Agent Selection</h1>
         <p>Choose your agent category and explore the agents.</p>
     </header>
 
     <div class="category-container">
         <div class="category" onclick="filterAgents('allcategory')">
-            <img src="Valorant_Assets/Class/all.png" alt="All Category" width="50">
+            <img src="Valorant_Assets/Class/all.png" alt="All Category" width="50" height="50">
             All Category
         </div>
         <div class="category" onclick="filterAgents('duelist')">
@@ -38,51 +39,43 @@
         </div>
     </div>
 
-    <div class="agent-list">
-        <div class="agent-card" data-category="duelist" onclick="showAgentDetails('phoenix')">
-            <h3>Phoenix</h3>
-            <img src="Valorant_Assets/Agents-Profiles/Phoenix.png" alt="Phoenix" width="100%">
+    <div class="main-container">
+       
+        <div class="agent-list">
+            <div class="agent-card" data-category="duelist" data-agent-id="phoenix" onclick="showAgentDetails('phoenix')">
+                <img src="Valorant_Assets/Agents-Profiles/Phoenix.png" alt="Phoenix" width="100%">
+            </div>
+            <div class="agent-card" data-category="controller" data-agent-id="brimstone" onclick="showAgentDetails('brimstone')">
+                <img src="Valorant_Assets/Agents-Profiles/Brimstone.png" alt="Brimstone" width="100%">
+            </div>
+            <div class="agent-card" data-category="initiator" data-agent-id="sova" onclick="showAgentDetails('sova')">
+                <img src="Valorant_Assets/Agents-Profiles/Sova.png" alt="Sova" width="100%">
+            </div>
+            <div class="agent-card" data-category="sentinel" data-agent-id="sage" onclick="showAgentDetails('sage')">
+                <img src="Valorant_Assets/Agents-Profiles/Sage.png" alt="Sage" width="100%">
+            </div>
+            <div class="agent-card" data-category="initiator" data-agent-id="skye" onclick="showAgentDetails('skye')">
+                <img src="Valorant_Assets/Agents-Profiles/Skye.png" alt="Skye" width="100%">
+            </div>
+            <div class="agent-card" data-category="controller" data-agent-id="omen" onclick="showAgentDetails('omen')">
+                <img src="Valorant_Assets/Agents-Profiles/Omen.png" alt="Omen" width="100%">
+            </div>
+            <div class="agent-card" data-category="duelist" data-agent-id="reyna" onclick="showAgentDetails('reyna')">
+                <img src="Valorant_Assets/Agents-Profiles/Reyna.png" alt="Reyna" width="100%">
+            </div>
+            <div class="agent-card" data-category="duelist" data-agent-id="jett" onclick="showAgentDetails('jett')">
+                <img src="Valorant_Assets/Agents-Profiles/Jett.png" alt="Jett" width="100%">
+            </div>
+            <div class="agent-card" data-category="duelist" data-agent-id="raze" onclick="showAgentDetails('raze')">
+                <img src="Valorant_Assets/Agents-Profiles/Raze.png" alt="Raze" width="100%">
+            </div>
+            <div class="agent-card" data-category="sentinel" data-agent-id="killjoy" onclick="showAgentDetails('killjoy')">
+                <img src="Valorant_Assets/Agents-Profiles/Killjoy.png" alt="Killjoy" width="100%">
+            </div>
         </div>
-        <div class="agent-card" data-category="controller" onclick="showAgentDetails('brimstone')">
-            <h3>Brimstone</h3>
-            <img src="Valorant_Assets/Agents-Profiles/Brimstone.png" alt="Brimstone" width="100%">
-        </div>
-        <div class="agent-card" data-category="initiator" onclick="showAgentDetails('sova')">
-            <h3>Sova</h3>
-            <img src="Valorant_Assets/Agents-Profiles/Sova.png" alt="Sova" width="100%">
-        </div>
-        <div class="agent-card" data-category="sentinel" onclick="showAgentDetails('sage')">
-            <h3>Sage</h3>
-            <img src="Valorant_Assets/Agents-Profiles/Sage.png" alt="Sage" width="100%">
-        </div>
-        <div class="agent-card" data-category="initiator" onclick="showAgentDetails('skye')">
-            <h3>Skye</h3>
-            <img src="Valorant_Assets/Agents-Profiles/Skye.png" alt="Skye" width="100%">
-        </div>
-        <div class="agent-card" data-category="controller" onclick="showAgentDetails('omen')">
-            <h3>Omen</h3>
-            <img src="Valorant_Assets/Agents-Profiles/Omen.png" alt="Omen" width="100%">
-        </div>
-        <div class="agent-card" data-category="duelist" onclick="showAgentDetails('reyna')">
-            <h3>Reyna</h3>
-            <img src="Valorant_Assets/Agents-Profiles/Reyna.png" alt="Reyna" width="100%">
-        </div>
-        <div class="agent-card" data-category="duelist" onclick="showAgentDetails('jett')">
-            <h3>Jett</h3>
-            <img src="Valorant_Assets/Agents-Profiles/Jett.png" alt="Jett" width="100%">
-        </div>
-        <div class="agent-card" data-category="duelist" onclick="showAgentDetails('raze')">
-            <h3>Raze</h3>
-            <img src="Valorant_Assets/Agents-Profiles/Raze.png" alt="Raze" width="100%">
-        </div>
-        <div class="agent-card" data-category="sentinel" onclick="showAgentDetails('killjoy')">
-            <h3>Killjoy</h3>
-            <img src="Valorant_Assets/Agents-Profiles/Killjoy.png" alt="Killjoy" width="100%">
-        </div>
+        <div class="agent-details-image"></div>
+        <div class="agent-details-container"></div>
     </div>
-
-    <!-- Add a container for agent details -->
-    <div class="agent-details-container"></div>
 
 </body>
 

@@ -5,70 +5,250 @@
       "name": "Phoenix",
       "role": "Duelist",
       "description": "Hailing from the U.K., Phoenix's star power shines through in his fighting style, igniting the battlefield with flash and flare. Whether he's got backup or not, he'll rush into a fight on his own terms.",
-      "abilities": ["Ability 1", "Ability 2"]
+      "abilities": [
+        {
+          "name": "CURVEBALL - [Q] EQUIP a flare orb that takes a curving path and detonates shortly after throwing. FIRE to curve the flare orb to the left, detonating and blinding any player who sees the orb. ALTERNATE FIRE to curve the flare orb to the right.",
+          "image": "Valorant_Assets/Abilities/Property 1=q-Phoenix_Curveball.png"
+        },
+        {
+          "name": "HOT HANDS - [E] EQUIP a fireball. FIRE to throw a fireball that explodes after a set amount of time or upon hitting the ground, creating a lingering fire zone that damages enemies.",
+          "image": "Valorant_Assets/Abilities/Property 1=e-Phoenix_Hot_Hands.png"
+        },
+        {
+          "name": "BLAZE - [C] EQUIP a flame wall. FIRE to create a line of flame that moves forward, creating a wall of fire that blocks vision and damages players passing through it. HOLD FIRE to bend the wall in the direction of your crosshair.",
+          "image": "Valorant_Assets/Abilities/Property 1=c-Phoenix_Blaze.png"
+        },
+        {
+          "name": "RUN IT BACK - [X] INSTANTLY place a marker at Phoenix’s location. While this ability is active, dying or allowing the timer to expire will end this ability and bring Phoenix back to this location with full health.",
+          "image": "Valorant_Assets/Abilities/Property 1=x-Phoenix_Run_it_Back.png"
+        }
+      ],
+      "image": "Valorant_Assets/Agents/Phoenix_artwork.png"
     },
     {
       "id": "brimstone",
       "name": "Brimstone",
       "role": "Controller",
-      "description": "",
-      "abilities": ["Ability 1", "Ability 2", "Ability 3"]
+      "description": "Joining from the U.S.A., Brimstone's orbital arsenal ensures his squad always has the advantage. His ability to deliver utility precisely and safely make him the unmatched boots-on-the-ground commander.",
+      "abilities": [
+        {
+          "name": "INCENDIARY - [Q] EQUIP an incendiary grenade launcher. FIRE to launch a grenade that detonates as it comes to a rest on the floor, creating a lingering fire zone that damages players within the zone.",
+          "image": "Valorant_Assets/Abilities/Property 1=q-Brimstone_Incendiary.png"
+        },
+        {
+          "name": "SKY SMOKE - [E] EQUIP a tactical map. FIRE to set locations where Brimstone's smoke clouds will land. ALT FIRE to confirm, launching long-lasting smoke clouds that block vision in the selected area.",
+          "image": "Valorant_Assets/Abilities/Property 1=e-Brimstone_Sky_Smoke.png"
+        },
+        {
+          "name": "STIM BEACON - [C] EQUIP a stim beacon. FIRE to toss the stim beacon in front of Brimstone. Upon landing, the stim beacon will create a field that grants players RapidFire.",
+          "image": "Valorant_Assets/Abilities/Property 1=c-Brimstone_Stim_Beacon.png"
+        },
+        {
+          "name": "ORBITAL STRIKE - [X] EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.",
+          "image": "Valorant_Assets/Abilities/Property 1=x-Brimstone_Orbital_Strike.png"
+        }
+      ],
+      "image": "Valorant_Assets/Agents/Brimstone_artwork.png"
     },
     {
       "id": "sova",
       "name": "Sova",
       "role": "Initiator",
-      "description": "",
-      "abilities": ["Ability 1", "Ability 2", "Ability 3"]
+      "description": "Born from the eternal winter of Russia's tundra, Sova tracks, finds, and eliminates enemies with ruthless efficiency and precision. His custom bow and incredible scouting abilities ensure that even if you run, you cannot hide.",
+      "abilities": [
+        {
+          "name": "SHOCK BOLT - [Q] EQUIP a bow with a shock bolt. FIRE to send the explosive bolt forward, detonating upon collision and damaging players nearby. HOLD FIRE to extend the range of the projectile. ALT FIRE to add up to two bounces to this arrow.",
+          "image": "Valorant_Assets/Abilities/Property 1=q-Sova_Shock_Bolt.png"
+        },
+        {
+          "name": "RECON BOLTE - [E] QUIP a bow with recon bolt. FIRE to send the recon bolt forward, activating upon collision and Revealing the location of nearby enemies caught in the line of sight of the bolt. Enemies can destroy this bolt. HOLD FIRE to extend the range of the projectile. ALT FIRE to add up to two bounces to this arrow.",
+          "image": "Valorant_Assets/Abilities/Property 1=e-Sova_Recon_Bolt.png"
+        },
+        {
+          "name": "OWL DRONE - [C] EQUIP an owl drone. FIRE to deploy and take control of movement of the drone. While in control of the drone, FIRE to shoot a marking dart. This dart will Reveal the location of any player struck by the dart. Enemies can destroy the Owl Drone.",
+          "image": "Valorant_Assets/Abilities/Property 1=c-Sova_Owl_Drone.png"
+        },
+        {
+          "name": "HUNTER'S FURY - [X] EQUIP a bow with three long-range wall-piercing energy blasts. FIRE to release an energy blast in a line in front of Sova, dealing damage and revealing the location of enemies caught in the line. This ability can be RE-USED up to two more times while the ability timer is active.",
+          "image": "Valorant_Assets/Abilities/Property 1=x-Sova_Hunter's_Fury.png"
+        }
+      ],
+      "image": "Valorant_Assets/Agents/Sova_artwork.png"
     },
     {
       "id": "sage",
       "name": "Sage",
       "role": "Sentinel",
-      "description": "",
-      "abilities": ["Ability 1", "Ability 2", "Ability 3"]
+      "description": "The stronghold of China, Sage creates safety for herself and her team wherever she goes. Able to revive fallen friends and stave off aggressive pushes, she provides a calm center to a hellish fight.",
+      "abilities": [
+        {
+          "name": "SLOW ORB - [Q] EQUIP a slowing orb. FIRE to throw a slowing orb forward that detonates upon landing, creating a lingering field that slows players caught inside of it.",
+          "image": "Valorant_Assets/Abilities/Property 1=q-Sage_Slow_Orb.png"
+        },
+        {
+          "name": "HEALING ORB - [E] EQUIP a healing orb. FIRE with your crosshairs over a damaged ally to activate a heal-over-time on them. ALT FIRE while Sage is damaged to activate a self heal-over-time.",
+          "image": "Valorant_Assets/Abilities/Property 1=x-Sage_Healing_Orb.png"
+        },
+        {
+          "name": "BARRIER ORB - [C] EQUIP a barrier orb. FIRE places a solid wall. ALT FIRE rotates the targeter.",
+          "image": "Valorant_Assets/Abilities/Property 1=c-Sage_Barrier_Orb.png"
+        },
+        {
+          "name": "RESURRECTION - [X] EQUIP a resurrection ability. FIRE with your crosshairs placed over a dead ally to begin resurrecting them. After a brief channel, the ally will be brought back to life with full health.",
+          "image": "Valorant_Assets/Abilities/Property 1=e-Sage_Resurrection.png"
+        }
+      ],
+      "image": "Valorant_Assets/Agents/Sage_artwork.png"
     },
     {
       "id": "skye",
       "name": "Skye",
       "role": "Initiator",
-      "description": "",
-      "abilities": ["Ability 1", "Ability 2", "Ability 3"]
+      "description": "Hailing from Australia, Skye and her band of beasts trail-blaze the way through hostile territory. With her creations hampering the enemy, and her power to heal others, the team is strongest and safest by Skye’s side.",
+      "abilities": [
+        {
+          "name": "TRAILBLAZER - [Q] EQUIP a Tasmanian tiger trinket. FIRE to send out and take control of the predator. While in control, FIRE to leap forward, exploding in a concussive blast and damaging directly hit enemies.",
+          "image": "Valorant_Assets/Abilities/Property 1=q-Skye_Trailblazer.png"
+        },
+        {
+          "name": "GUIDING LIGHT - [E] EQUIP a hawk trinket. FIRE to send it forward. HOLD FIRE to guide the hawk in the direction of your crosshair. RE-USE while the hawk is in flight to transform it into a flash that plays a hit confirm if an enemy was within range and line of sight.",
+          "image": "Valorant_Assets/Abilities/Property 1=e-Skye_Guiding_Light.png"
+        },
+        {
+          "name": "REGROWTH - [C] EQUIP a healing trinket. HOLD FIRE to channel, healing allies in range and line of sight. Can be reused until her healing pool is depleted. Skye cannot heal herself.",
+          "image": "Valorant_Assets/Abilities/Property 1=c-Skye_Regrowth.png"
+        },
+        {
+          "name": "SEEKERS - [X] EQUIP a Seeker trinket. FIRE to send out three Seekers to track down the three closest enemies. If a Seeker reaches its target, it Nearsights them. Enemies can destroy the Seekers.",
+          "image": "Valorant_Assets/Abilities/Property 1=x-Skye_Ultimate.png"
+        }
+      ],
+      "image": "Valorant_Assets/Agents/Skye_artwork.png"
     },
     {
       "id": "omen",
       "name": "Omen",
       "role": "Controller",
-      "description": "",
-      "abilities": ["Ability 1", "Ability 2", "Ability 3"]
+      "description": "A phantom of a memory, Omen hunts in the shadows. He renders enemies blind, teleports across the field, then lets paranoia take hold as his foe scrambles to learn where he might strike next.",
+      "abilities": [
+        {
+          "name": "PARANOIA - [Q] INSTANTLY fire a shadow projectile forward, briefly reducing the vision range of all players it touches. This projectile can pass straight through walls.",
+          "image": "Valorant_Assets/Abilities/Property 1=q-Omen_Paranoia.png"
+        },
+        {
+          "name": "DARK COVER - [E] EQUIP a shadow orb, entering a phased world to place and target the orbs. PRESS the ability key to throw the shadow orb to the marked location, creating a long-lasting shadow sphere that blocks vision. HOLD FIRE while targeting to move the marker further away. HOLD ALT FIRE while targeting to move the marker closer. PRESS RELOAD to toggle normal targeting view.",
+          "image": "Valorant_Assets/Abilities/Property 1=e-Omen_Dark_Cover.png"
+        },
+        {
+          "name": "SHROUDED STEP - [C] EQUIP a shadow walk ability and see its range indicator. FIRE to begin a brief channel, then teleport to the marked location.",
+          "image": "Valorant_Assets/Abilities/Property 1=c-Omen_Shrouded_Step.png"
+        },
+        {
+          "name": "FROM THE SHADOWS - [X] EQUIP a tactical map. FIRE to begin teleporting to the selected location. While teleporting, Omen will appear as a Shade that can be destroyed by an enemy to cancel his teleport.",
+          "image": "Valorant_Assets/Abilities/Property 1=x-Omen_From_the_Shadows.png"
+        }
+      ],
+      "image": "Valorant_Assets/Agents/Omen_artwork.png"
     },
     {
       "id": "reyna",
       "name": "Reyna",
       "role": "Duelist",
-      "description": "",
-      "abilities": ["Ability 1", "Ability 2", "Ability 3"]
+      "description": "Forged in the heart of Mexico, Reyna dominates single combat, popping off with each kill she scores. Her capability is only limited by her raw skill, making her highly dependent on performance.",
+      "abilities": [
+        {
+          "name": "DEVOUR - [Q] Enemies killed by Reyna leave behind Soul Orbs that last 3 seconds. INSTANTLY consume a nearby soul orb, rapidly healing for a short duration. Health gained through this skill exceeding 100 will decay over time. If EMPRESS is active, this skill will automatically cast and not consume the orb.",
+          "image": "Valorant_Assets/Abilities/Property 1=q-Reyna_Devour.png"
+        },
+        {
+          "name": "DISMISS - [E] INSTANTLY consume a nearby soul orb, becoming intangible for a short duration. If EMPRESS is active, also become invisible.",
+          "image": "Valorant_Assets/Abilities/Property 1=e-Reyna_Dismiss.png"
+        },
+        {
+          "name": "LEER - [C] EQUIP an ethereal destructible eye. ACTIVATE to cast the eye a short distance forward. The eye will Nearsight all enemies who look at it.",
+          "image": "Valorant_Assets/Abilities/Property 1=c-Reyna_Leer.png"
+        },
+        {
+          "name": "EMPRESS - [X] INSTANTLY enter a frenzy, increasing firing speed, equip and reload speed dramatically. Scoring a kill renews the duration.",
+          "image": "Valorant_Assets/Abilities/Property 1=x-Reyna_Empress.png"
+        }
+      ],
+      "image": "Valorant_Assets/Agents/Reyna_artwork.png"
     },
     {
       "id": "jett",
       "name": "Jett",
       "role": "Duelist",
-      "description": "",
-      "abilities": ["Ability 1", "Ability 2", "Ability 3"]
+      "description": "Representing her home country of South Korea, Jett's agile and evasive fighting style lets her take risks no one else can. She runs circles around every skirmish, cutting enemies before they even know what hit them.",
+      "abilities": [
+        {
+          "name": "UPDRAFT - [Q] INSTANTLY propel Jett high into the air.",
+          "image": "Valorant_Assets/Abilities/Property 1=q-Jett_Updraft.png"
+        },
+        {
+          "name": "TAILWIND - [E] ACTIVATE to prepare a gust of wind for a limited time. RE-USE the wind to propel Jett in the direction she is moving. If Jett is standing still, she propels forward. Tailwind charge resets every two kills.",
+          "image": "Valorant_Assets/Abilities/Property 1=e-Jett_Tailwind.png"
+        },
+        {
+          "name": "CLOUDBURST - [C] INSTANTLY throw a projectile that expands into a brief vision-blocking cloud on impact with a surface. HOLD the ability key to curve the smoke in the direction of your crosshair.",
+          "image": "Valorant_Assets/Abilities/Property 1=c-Jett_Cloudburst.png"
+        },
+        {
+          "name": "BLADE STORM - [X] EQUIP a set of highly accurate throwing knives. FIRE to throw a single knife and recharge knives on a kill. ALT FIRE to throw all remaining daggers but does not recharge on a kill.",
+          "image": "Valorant_Assets/Abilities/Property 1=x-Jett_Blade_Storm.png"
+        }
+      ],
+      "image": "Valorant_Assets/Agents/Jett_artwork.png"
     },
     {
       "id": "raze",
       "name": "Raze",
       "role": "Duelist",
-      "description": "",
-      "abilities": ["Ability 1", "Ability 2", "Ability 3"]
+      "description": "Raze explodes out of Brazil with her big personality and big guns. With her blunt-force-trauma playstyle, she excels at flushing entrenched enemies and clearing tight spaces with a generous dose of boom.",
+      "abilities": [
+        {
+          "name": "BLAST PACK - [Q] INSTANTLY throw a Blast Pack that will stick to surfaces. RE-USE the ability after deployment to detonate, damaging and moving anything hit. Raze isn't damaged by this ability, but will still take fall damage if launched up far enough.",
+          "image": "Valorant_Assets/Abilities/Property 1=q-Raze_Blast_Pack.png"
+        },
+        {
+          "name": "PAINT SHELLS - [E] EQUIP a cluster grenade. FIRE to throw the grenade, which does damage and creates sub-munitions, each doing damage to anyone in their range. ALT FIRE to lob. Paint Shells charge resets every two kills.",
+          "image": "Valorant_Assets/Abilities/Property 1=e-Raze_Paint_Sheels.png"
+        },
+        {
+          "name": "BOOM BOT - [C] EQUIP a Boom Bot. FIRE will deploy the bot, causing it to travel in a straight line on the ground, bouncing off walls. The Boom Bot will lock on to any enemies in its frontal cone and chase them, exploding for heavy damage if it reaches them.",
+          "image": "Valorant_Assets/Abilities/Property 1=c-Raze_Boom_Bot.png"
+        },
+        {
+          "name": "SHOWSTOPPER - [X] EQUIP a rocket launcher. FIRE to shoot a rocket that does massive area damage on contact with anything.",
+          "image": "Valorant_Assets/Abilities/Property 1=x-Raze_Showstopper.png"
+        }
+      ],
+      "image": "Valorant_Assets/Agents/Raze_artwork.png"
     },
     {
       "id": "killjoy",
       "name": "Killjoy",
       "role": "Sentinel",
-      "description": "",
-      "abilities": ["Ability 1", "Ability 2", "Ability 3"]
+      "description": "The genius of Germany. Killjoy secures the battlefield with ease using her arsenal of inventions. If the damage from her gear doesn't stop her enemies, her robots' debuff will help make short work of them.",
+      "abilities": [
+        {
+          "name": "ALARMBOT - [Q] EQUIP a covert Alarmbot. FIRE to deploy a bot that hunts down enemies that get in range. After reaching its target, the bot explodes, applying Vulernable. HOLD EQUIP to recall a deployed bot.",
+          "image": "Valorant_Assets/Abilities/Property 1=q-Killjoy_Alarmbot.png"
+        },
+        {
+          "name": "TURRET - [E] EQUIP a Turret. FIRE to deploy a turret that fires at enemies in a 180 degree cone. HOLD EQUIP to recall the deployed turret.",
+          "image": "Valorant_Assets/Abilities/Property 1=e-Killjoy_Turret.png"
+        },
+        {
+          "name": "NANOSWARM - [C] EQUIP a Nanoswarm grenade. FIRE to throw the grenade. Upon landing, the Nanoswarm goes covert. ACTIVATE the Nanoswarm to deploy a damaging swarm of nanobots.",
+          "image": "Valorant_Assets/Abilities/Property 1=c-Killjoy_Nanoswarm.png"
+        },
+        {
+          "name": "LOCKDOWN - [X] EQUIP the Lockdown device. FIRE to deploy the device. After a long windup, the device Detains all enemies caught in the radius. The device can be destroyed by enemies.",
+          "image": "Valorant_Assets/Abilities/Property 1=x-Killjoy_Lockdown.png"
+        }
+      ],
+      "image": "Valorant_Assets/Agents/Killjoy_artwork.png"
     }
   ]
 }
