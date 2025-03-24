@@ -1,30 +1,25 @@
-// Wait for the DOM to be fully loaded before executing JavaScript
 document.addEventListener('DOMContentLoaded', function () {
-  // Select all category buttons
+  // Select all category buttons and agent cards
   const categoryButtons = document.querySelectorAll('.category');
-  // Select all agent cards
   const agentCards = document.querySelectorAll('.agent-card');
-  // Select all agent details sections
-  const agentDetails = document.querySelectorAll('.agent-details');
 
-  // Add click event to each category button
+  // Add click event listeners to category buttons
   categoryButtons.forEach((button) => {
     button.addEventListener('click', function () {
-      // Remove "category-selected" class from all category buttons
+      // Remove the 'category-selected' class from all buttons
       categoryButtons.forEach((btn) =>
         btn.classList.remove('category-selected')
       );
-      // Add "category-selected" class to the clicked category
+      // Add the 'category-selected' class to the clicked button
       this.classList.add('category-selected');
 
-      // Get the selected category, trimming any extra spaces
+      // Get the selected category
       const selectedCategory = this.textContent.trim().toLowerCase();
 
-      // Filter agent cards based on the selected category
+      // Show or hide agent cards based on the selected category
       agentCards.forEach((card) => {
         const cardCategory = card.dataset.category.toLowerCase();
 
-        // Show agents based on the selected category
         if (
           selectedCategory === 'all category' ||
           (selectedCategory === 'duelists' && cardCategory === 'duelist') ||
@@ -33,30 +28,46 @@ document.addEventListener('DOMContentLoaded', function () {
           (selectedCategory === 'initiators' && cardCategory === 'initiator') ||
           (selectedCategory === 'sentinels' && cardCategory === 'sentinel')
         ) {
-          card.style.display = 'block'; // Show the card
+          card.style.display = 'block';
         } else {
-          card.style.display = 'none'; // Hide the card
+          card.style.display = 'none';
         }
       });
+
+      // Update the category description
+      const categoryDescriptions = {
+        duelists: "Duelists are self-sufficient fraggers who their team expects, through abilities and skills, to get high frags and seek out engagements first.",
+        controllers: "Controllers are experts in slicing up dangerous territory to set their team up for success.",
+        initiators: "Initiators challenge angles by setting up their team to enter contested ground and push defenders away.",
+        sentinels: "Sentinels are defensive experts who can lock down areas and protect their teammates from flanks."
+      };
+
+      const categoryInfo = categoryDescriptions[selectedCategory] || "Explore all agents and their unique abilities.";
+      document.querySelector('.agent-details-container').innerHTML = `
+        <div class="agent-details active">
+          <h2>${this.textContent.trim()}</h2>
+          <p>${categoryInfo}</p>
+        </div>
+      `;
     });
   });
 
-  // Fetch agent details from JSON file
+  // Fetch agent data from the JSON file
   fetch('agents.json')
     .then(response => response.json())
     .then(data => {
       const agents = data.agents;
 
-      // Function to show agent details
+      // Function to display agent details
       function showAgentDetails(agentId) {
-        // Hide all agent details by default
+        // Clear the agent details and image containers
         document.querySelector('.agent-details-container').innerHTML = '';
         document.querySelector('.agent-details-image').innerHTML = '';
 
-        // Find the agent details from the JSON data
+        // Find the selected agent by ID
         const agent = agents.find(a => a.id === agentId);
         if (agent) {
-          // Create agent details HTML
+          // Generate HTML for the agent details
           const agentDetailHtml = `
             <div class="agent-details active">
               <h2>${agent.name} - ${agent.role}</h2>
@@ -65,26 +76,51 @@ document.addEventListener('DOMContentLoaded', function () {
               <ul>
                 ${agent.abilities.map(ability => `
                   <li>
-                    <img src="${ability.image}" alt="${ability.name}" width="50">
-                    ${ability.name}
+                    <img src="${ability.image}" alt="${ability.name}" width="50" data-ability-info="${ability.name}">
+                    <span class="ability-name">${ability.name}</span>
                   </li>`).join('')}
               </ul>
+              <div class="ability-info"></div>
             </div>
           `;
-
-          // Insert the agent details into the DOM
           document.querySelector('.agent-details-container').innerHTML = agentDetailHtml;
 
-          // Insert the agent image into the DOM
+          // Generate HTML for the agent image
           const agentImageHtml = `<img src="${agent.image}" alt="${agent.name}" width="100%">`;
           document.querySelector('.agent-details-image').innerHTML = agentImageHtml;
+
+          // Add click event to toggle ability names and transparency
+          const abilityImages = document.querySelectorAll('.agent-details ul li img');
+          const abilityInfo = document.querySelector('.ability-info');
+
+          abilityImages.forEach(img => {
+            img.addEventListener('click', function () {
+              const isTransparent = this.classList.contains('transparent');
+
+              // Reset all abilities
+              abilityImages.forEach(image => image.classList.remove('transparent'));
+              abilityInfo.classList.remove('active');
+
+              if (!isTransparent) {
+                // Make other abilities transparent
+                abilityImages.forEach(image => {
+                  if (image !== this) {
+                    image.classList.add('transparent');
+                  }
+                });
+
+                // Show ability information
+                abilityInfo.textContent = this.dataset.abilityInfo;
+                abilityInfo.classList.add('active');
+              }
+            });
+          });
         }
       }
 
-      // Add click event to each agent card for showing details
+      // Add click event listeners to agent cards
       agentCards.forEach(card => {
         card.addEventListener('click', function () {
-          // Get the agent ID from the clicked card
           const agentId = this.dataset.agentId;
           showAgentDetails(agentId);
         });

@@ -1,14 +1,14 @@
-/* Basic Styles */
 body {
   font-family: Arial, sans-serif;
   background-color: #111;
   color: white;
   margin: 0;
   padding: 0;
-  background-image: url('Valorant_Assets/Valorant-Art/back.png'); /* Add this line */
-  background-size: cover; /* Ensure the image covers the entire background */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-image: url('Valorant_Assets/Valorant-Art/back.png'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  height: 100vh; 
 }
 
 header {
@@ -103,15 +103,18 @@ header p {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 650px; 
+  height: 650px; 
+  overflow: hidden; 
 }
 
 .agent-details-image img {
-  height: 100%; /* Set a fixed height */
-  width: 100%; /* Set a fixed width */
- 
+  height: 100%; 
+  width: 100%; 
+  object-fit: contain; 
 }
 
-/* Agent Details Container */
+
 .agent-details-container {
   flex: 1;
   display: flex;
@@ -119,7 +122,7 @@ header p {
   align-items: center;
 }
 
-/* Agent Details */
+
 .agent-details {
   display: none;
   background: #222;
@@ -140,9 +143,51 @@ header p {
 .agent-details ul {
   list-style-type: none;
   padding-left: 0;
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 10px; /
 }
 
 .agent-details ul li {
   font-size: 1.1rem;
   margin: 5px 0;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  cursor: pointer; 
+}
+
+.agent-details ul li img {
+  transition: transform 0.3s, opacity 0.3s; /* Add opacity transition */
+}
+
+.agent-details ul li img.transparent {
+  opacity: 0.3; /* Make the image transparent */
+}
+
+.ability-name {
+  display: none; 
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #fff;
+  text-align: center; 
+}
+
+.ability-name.active {
+  display: block; 
+}
+
+.ability-info {
+  display: none; /* Initially hidden */
+  margin-top: 20px;
+  padding: 10px;
+  background: #222;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+}
+
+.ability-info.active {
+  display: block; /* Show when active */
 }
