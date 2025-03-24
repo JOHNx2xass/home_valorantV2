@@ -8,7 +8,6 @@ body {
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
-  height: 100vh; 
 }
 
 header {
@@ -159,11 +158,11 @@ header p {
 }
 
 .agent-details ul li img {
-  transition: transform 0.3s, opacity 0.3s; /* Add opacity transition */
+  transition: transform 0.3s, opacity 0.3s; 
 }
 
 .agent-details ul li img.transparent {
-  opacity: 0.3; /* Make the image transparent */
+  opacity: 0.3; 
 }
 
 .ability-name {
@@ -179,7 +178,7 @@ header p {
 }
 
 .ability-info {
-  display: none; /* Initially hidden */
+  display: none; 
   margin-top: 20px;
   padding: 10px;
   background: #222;
@@ -189,5 +188,5 @@ header p {
 }
 
 .ability-info.active {
-  display: block; /* Show when active */
+  display: block; 
 }
