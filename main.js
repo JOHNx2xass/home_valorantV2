@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
 
-      // Update the category description
+      // Category description
       const categoryDescriptions = {
         duelists: "Duelists are self-sufficient fraggers who their team expects, through abilities and skills, to get high frags and seek out engagements first.",
         controllers: "Controllers are experts in slicing up dangerous territory to set their team up for success.",
