@@ -1,7 +1,7 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'kanit', sans-serif;
   background-color: #111;
-  color: white;
+  color: #ffffff;
   margin: 0;
   padding: 0;
   background-image: url('Valorant_Assets/Valorant-Art/back.png'); 
@@ -170,7 +170,7 @@ header p {
   margin-top: 5px;
   font-size: 0.9rem;
   color: #fff;
-  text-align: center; 
+  text-align: justify;
 }
 
 .ability-name.active {
@@ -189,4 +189,5 @@ header p {
 
 .ability-info.active {
   display: block; 
+  text-align: justify;
 }
