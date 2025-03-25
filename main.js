@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
               <ul>
                 ${agent.abilities.map(ability => `
                   <li>
-                    <img src="${ability.image}" alt="${ability.name}" width="50" data-ability-info="${ability.name}">
+                    <img src="${ability.image}"width="50" data-ability-info="${ability.name}">
                     <span class="ability-name">${ability.name}</span>
                   </li>`).join('')}
               </ul>
