@@ -67,16 +67,28 @@ document.addEventListener('DOMContentLoaded', function () {
         // Find the selected agent by ID
         const agent = agents.find(a => a.id === agentId);
         if (agent) {
+          // Define role images
+          const roleImages = {
+            Duelist: "Valorant_Assets/Class/Property 1=Duelist.png",
+            Controller: "Valorant_Assets/Class/Property 1=Controller.png",
+            Initiator: "Valorant_Assets/Class/Property 1=Initiator.png",
+            Sentinel: "Valorant_Assets/Class/Property 1=Sentinel.png"
+          };
+
           // Generate HTML for the agent details
           const agentDetailHtml = `
             <div class="agent-details active">
-              <h2>${agent.name} - ${agent.role}</h2>
+              <h2>
+                ${agent.name} - 
+                <img src="${roleImages[agent.role]}" alt="${agent.role}" width="30" height="30">
+                ${agent.role}
+              </h2>
               <p>${agent.description}</p>
               <h3>SPECIAL ABILITIES</h3>
               <ul>
                 ${agent.abilities.map(ability => `
                   <li>
-                    <img src="${ability.image}"width="50" data-ability-info="${ability.name}">
+                    <img src="${ability.image}" width="50" data-ability-info="${ability.name}">
                     <span class="ability-name">${ability.name}</span>
                   </li>`).join('')}
               </ul>
